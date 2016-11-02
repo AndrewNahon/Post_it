@@ -1,0 +1,16 @@
+<%= render 'shared/content_header', content: "Register" %>
+
+<div class='well span5'>
+  <%= render 'shared/error_msg', obj: @user %>
+  <%= form_for @user do |f| %>
+    <div class="form-group">
+      <%= f.label :username, class: 'form-control' %>
+      <%= f.text_field :username, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :password, class: 'form-control' %>
+      <%= f.password_field :password, class: 'form-control' %>
+    </div>
+    <%= f.submit 'Register', class: 'btn btn-primary' %>
+  <% end %>
+</div>

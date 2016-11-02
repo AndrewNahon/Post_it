@@ -1,0 +1,7 @@
+<% all_posts = link_to 'All posts', posts_path %>
+
+<%= render 'shared/content_header', content: "#{all_posts} &raquo; #{@category.name}".html_safe %>
+
+<% @category.posts.each do |post| %>
+  <%= render 'posts/post', post: post %>
+<% end %>
